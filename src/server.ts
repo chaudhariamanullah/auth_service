@@ -3,7 +3,7 @@ dotenv.config();
 
 import app from "./app.js";
 
-const PORT = 3007;
+const PORT = process.env.PORT || 3007;
 
 app.listen(PORT,()=>{
     console.log(`${PORT} Is Listening`)
