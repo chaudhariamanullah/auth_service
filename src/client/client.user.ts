@@ -2,7 +2,7 @@ const UserClient = {
 
   async checkPhone(phone: string) {
 
-    const res = await fetch(`http://localhost:3002/users/phone-exists/${phone}`,);
+    const res = await fetch(`https://users-service-k2yn.onrender.com/users/phone-exists/${phone}`,);
 
     const data = await res.json() as any;
     return data;
@@ -11,7 +11,7 @@ const UserClient = {
 
   async addNewUser(user_public_id:string,user_fname:string | undefined ,user_lname:string | undefined){
 
-    const res = await fetch(`http://localhost:3002/users/google`,{
+    const res = await fetch(`https://users-service-k2yn.onrender.com/users/google`,{
       method:"POST",
       headers: {
         "Content-Type": "application/json"
