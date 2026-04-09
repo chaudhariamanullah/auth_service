@@ -39,7 +39,7 @@ const authService = {
             user_phone:user.user_phone,
         }
 
-        const sent = await fetch("http://localhost:3002/users", {
+        const sent = await fetch("https://users-service-k2yn.onrender.com/users", {
             method:'POST',
             headers:{ 'Content-Type': 'application/json' },
             body: JSON.stringify( userProfile )
